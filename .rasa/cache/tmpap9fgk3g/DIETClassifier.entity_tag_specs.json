@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-displays",
+      "2": "I-displays",
+      "3": "L-displays",
+      "4": "U-displays",
+      "5": "B-endpoint",
+      "6": "I-endpoint",
+      "7": "L-endpoint",
+      "8": "U-endpoint",
+      "9": "B-function",
+      "10": "I-function",
+      "11": "L-function",
+      "12": "U-function",
+      "13": "B-services",
+      "14": "I-services",
+      "15": "L-services",
+      "16": "U-services",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-displays": 1,
+      "I-displays": 2,
+      "L-displays": 3,
+      "U-displays": 4,
+      "B-endpoint": 5,
+      "I-endpoint": 6,
+      "L-endpoint": 7,
+      "U-endpoint": 8,
+      "B-function": 9,
+      "I-function": 10,
+      "L-function": 11,
+      "U-function": 12,
+      "B-services": 13,
+      "I-services": 14,
+      "L-services": 15,
+      "U-services": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

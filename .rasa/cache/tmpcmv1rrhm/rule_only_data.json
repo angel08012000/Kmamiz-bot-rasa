@@ -1,0 +1,10 @@
+{
+  "rule_only_slots": [
+    "function",
+    "insight",
+    "endpoint",
+    "service",
+    "display"
+  ],
+  "rule_only_loops": []
+}

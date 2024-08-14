@@ -1,0 +1,62 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_charts\"}}]": "utter_ask_namespace",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_charts\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_namespace\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_charts\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"namespace\": [1.0]}, \"user\": {\"entities\": [\"namespace\"], \"intent\": \"say_namespace\"}}]": "action_respond_based_on_function_value",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"namespace\": [1.0]}, \"user\": {\"entities\": [\"namespace\"], \"intent\": \"say_namespace\"}}, {\"prev_action\": {\"action_name\": \"action_respond_based_on_function_value\"}, \"slots\": {\"namespace\": [1.0]}, \"user\": {\"entities\": [\"namespace\"], \"intent\": \"say_namespace\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"start_kmamiz_bot\"}}]": "utter_start_kmamiz_bot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"start_kmamiz_bot\"}}, {\"prev_action\": {\"action_name\": \"utter_start_kmamiz_bot\"}, \"user\": {\"intent\": \"start_kmamiz_bot\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"chart\": [1.0, 0.0, 0.0, 0.0, 0.0]}, \"user\": {\"entities\": [\"charts\"], \"intent\": \"choose_type_of_charts\"}}]": "utter_type_of_display",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"chart\": [1.0, 0.0, 0.0, 0.0, 0.0]}, \"user\": {\"entities\": [\"charts\"], \"intent\": \"choose_type_of_charts\"}}, {\"prev_action\": {\"action_name\": \"utter_type_of_display\"}, \"slots\": {\"chart\": [1.0, 0.0, 0.0, 0.0, 0.0]}, \"user\": {\"entities\": [\"charts\"], \"intent\": \"choose_type_of_charts\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"insight\": [1.0]}, \"user\": {\"entities\": [\"insights\"], \"intent\": \"choose_type_of_insights\"}}]": "action_respond_based_on_insight_value",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"insight\": [1.0]}, \"user\": {\"entities\": [\"insights\"], \"intent\": \"choose_type_of_insights\"}}, {\"prev_action\": {\"action_name\": \"action_respond_based_on_insight_value\"}, \"slots\": {\"insight\": [1.0]}, \"user\": {\"entities\": [\"insights\"], \"intent\": \"choose_type_of_insights\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"service\": [1.0]}, \"user\": {\"entities\": [\"services\"], \"intent\": \"choose_services_of_insights\"}}]": "utter_type_of_display",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"service\": [1.0]}, \"user\": {\"entities\": [\"services\"], \"intent\": \"choose_services_of_insights\"}}, {\"prev_action\": {\"action_name\": \"utter_type_of_display\"}, \"slots\": {\"service\": [1.0]}, \"user\": {\"entities\": [\"services\"], \"intent\": \"choose_services_of_insights\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"display\": [1.0]}, \"user\": {\"entities\": [\"displays\"], \"intent\": \"choose_type_of_display\"}}]": "action_get_output",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"display\": [1.0]}, \"user\": {\"entities\": [\"displays\"], \"intent\": \"choose_type_of_display\"}}, {\"prev_action\": {\"action_name\": \"action_get_output\"}, \"slots\": {\"display\": [1.0]}, \"user\": {\"entities\": [\"displays\"], \"intent\": \"choose_type_of_display\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_insights\"}}]": "utter_ask_namespace",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_insights\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_namespace\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_insights\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_schema\"}}]": "utter_ask_namespace",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_schema\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_namespace\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_schema\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"endpoint\": [1.0]}, \"user\": {\"entities\": [\"endpoint\"], \"intent\": \"choose_endpoint\"}}]": "action_display_schema",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"endpoint\": [1.0]}, \"user\": {\"entities\": [\"endpoint\"], \"intent\": \"choose_endpoint\"}}, {\"prev_action\": {\"action_name\": \"action_display_schema\"}, \"slots\": {\"endpoint\": [1.0]}, \"user\": {\"entities\": [\"endpoint\"], \"intent\": \"choose_endpoint\"}}]": "action_listen"
+    },
+    "rule_only_slots": [
+      "insight",
+      "display",
+      "namespace",
+      "endpoint",
+      "function",
+      "chart",
+      "service"
+    ],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_insights\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_namespace\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_insights\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_insights\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"display\": [1.0]}, \"user\": {\"entities\": [\"displays\"], \"intent\": \"choose_type_of_display\"}}, {\"prev_action\": {\"action_name\": \"action_get_output\"}, \"slots\": {\"display\": [1.0]}, \"user\": {\"entities\": [\"displays\"], \"intent\": \"choose_type_of_display\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"endpoint\": [1.0]}, \"user\": {\"entities\": [\"endpoint\"], \"intent\": \"choose_endpoint\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_schema\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"insight\": [1.0]}, \"user\": {\"entities\": [\"insights\"], \"intent\": \"choose_type_of_insights\"}}, {\"prev_action\": {\"action_name\": \"action_respond_based_on_insight_value\"}, \"slots\": {\"insight\": [1.0]}, \"user\": {\"entities\": [\"insights\"], \"intent\": \"choose_type_of_insights\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"namespace\": [1.0]}, \"user\": {\"entities\": [\"namespace\"], \"intent\": \"say_namespace\"}}, {\"prev_action\": {\"action_name\": \"action_respond_based_on_function_value\"}, \"slots\": {\"namespace\": [1.0]}, \"user\": {\"entities\": [\"namespace\"], \"intent\": \"say_namespace\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"start_kmamiz_bot\"}}, {\"prev_action\": {\"action_name\": \"utter_start_kmamiz_bot\"}, \"user\": {\"intent\": \"start_kmamiz_bot\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_schema\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_namespace\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_schema\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"service\": [1.0]}, \"user\": {\"entities\": [\"services\"], \"intent\": \"choose_services_of_insights\"}}, {\"prev_action\": {\"action_name\": \"utter_type_of_display\"}, \"slots\": {\"service\": [1.0]}, \"user\": {\"entities\": [\"services\"], \"intent\": \"choose_services_of_insights\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"start_kmamiz_bot\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_charts\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_namespace\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_charts\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"chart\": [1.0, 0.0, 0.0, 0.0, 0.0]}, \"user\": {\"entities\": [\"charts\"], \"intent\": \"choose_type_of_charts\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"insight\": [1.0]}, \"user\": {\"entities\": [\"insights\"], \"intent\": \"choose_type_of_insights\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"chart\": [1.0, 0.0, 0.0, 0.0, 0.0]}, \"user\": {\"entities\": [\"charts\"], \"intent\": \"choose_type_of_charts\"}}, {\"prev_action\": {\"action_name\": \"utter_type_of_display\"}, \"slots\": {\"chart\": [1.0, 0.0, 0.0, 0.0, 0.0]}, \"user\": {\"entities\": [\"charts\"], \"intent\": \"choose_type_of_charts\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"display\": [1.0]}, \"user\": {\"entities\": [\"displays\"], \"intent\": \"choose_type_of_display\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"service\": [1.0]}, \"user\": {\"entities\": [\"services\"], \"intent\": \"choose_services_of_insights\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"endpoint\": [1.0]}, \"user\": {\"entities\": [\"endpoint\"], \"intent\": \"choose_endpoint\"}}, {\"prev_action\": {\"action_name\": \"action_display_schema\"}, \"slots\": {\"endpoint\": [1.0]}, \"user\": {\"entities\": [\"endpoint\"], \"intent\": \"choose_endpoint\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"function\": [1.0]}, \"user\": {\"entities\": [\"function\"], \"intent\": \"choose_charts\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"namespace\": [1.0]}, \"user\": {\"entities\": [\"namespace\"], \"intent\": \"say_namespace\"}}]"
+    ]
+  }
+}

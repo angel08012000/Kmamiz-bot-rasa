@@ -1,0 +1,22 @@
+[
+  {
+    "name": "endpoint",
+    "pattern": "[A-Za-z0-9].*"
+  },
+  {
+    "name": "services",
+    "pattern": "[A-Za-z0-9].*"
+  },
+  {
+    "name": "displays",
+    "pattern": "(\\btext\\b|\\bimage\\b|\\burl\\b)"
+  },
+  {
+    "name": "insights",
+    "pattern": "(\\bcohesion\\b|\\bcoupling\\b|\\binstability\\b|\\ball\\ insights\\b)"
+  },
+  {
+    "name": "function",
+    "pattern": "(\\binsight\\b|\\bdependency\\b|\\bswagger\\b|\\bschema\\b)"
+  }
+]

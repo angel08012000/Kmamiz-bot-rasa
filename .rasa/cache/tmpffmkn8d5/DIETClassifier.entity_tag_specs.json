@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-dependency",
+      "2": "I-dependency",
+      "3": "L-dependency",
+      "4": "U-dependency",
+      "5": "B-displays",
+      "6": "I-displays",
+      "7": "L-displays",
+      "8": "U-displays",
+      "9": "B-endpoint",
+      "10": "I-endpoint",
+      "11": "L-endpoint",
+      "12": "U-endpoint",
+      "13": "B-insights",
+      "14": "I-insights",
+      "15": "L-insights",
+      "16": "U-insights",
+      "17": "B-services",
+      "18": "I-services",
+      "19": "L-services",
+      "20": "U-services",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-dependency": 1,
+      "I-dependency": 2,
+      "L-dependency": 3,
+      "U-dependency": 4,
+      "B-displays": 5,
+      "I-displays": 6,
+      "L-displays": 7,
+      "U-displays": 8,
+      "B-endpoint": 9,
+      "I-endpoint": 10,
+      "L-endpoint": 11,
+      "U-endpoint": 12,
+      "B-insights": 13,
+      "I-insights": 14,
+      "L-insights": 15,
+      "U-insights": 16,
+      "B-services": 17,
+      "I-services": 18,
+      "L-services": 19,
+      "U-services": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

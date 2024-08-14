@@ -1,0 +1,113 @@
+version: "3.1"
+nlu:
+- intent: start_kmamiz_bot
+  examples: |
+    - start
+
+#--- insight START ---#
+- intent: choose_insights
+  examples: |
+    - I want to find [insight](function)
+    - Can you show me the [insight](function) of service?
+    - Show me the [insight](function).
+    - i want to find [insight](function)
+    - i want to watch [insight](function)
+- intent: choose_type_of_insights
+  examples: |
+    - I want to find cohesion
+    - I want to watch the cohesion of all service
+    - I want to find coupling
+    - I want to watch the coupling of all service
+    - I want to find instability
+    - I want to watch the instability of all service
+    - I want to find all insights
+    - I want to watch all insights of one service
+- intent: choose_services_of_insights
+  examples: |
+    - I want to find all insights of [productpage.book.v1](services)
+    - I want to find all insights of [details.book.v1](services)
+    - I want to find all insights of [ratings.book.v1](services)
+    - I want to find all insights of [reviews.book.v1](services)
+    - I want to find all insights of [reviews.book.v2](services)
+    - I want to find all insights of [reviews.book.v3](services)
+    - I want to find all insights of [a.b.c](services)
+#--- insight END ---#
+
+
+#--- dependency START ---#
+- intent: choose_dependencies
+  examples: |
+    - I want to find [dependency](function)
+    - Can you show me the [dependency](function) of service?
+    - Show me the [dependency](function)
+    - i want to find [dependency](function)
+    - i want to watch [dependency](function)
+- intent: choose_type_of_dependencies
+  examples: |
+    - I want to find the service dependency graph
+    - I want to watch the service dependency graph
+    - I want to find the endpoint dependency graph
+    - I want to watch the endpoint dependency graph
+    - I want to find direct service dependencies
+    - I want to watch the direct service dependencies
+    - I want to find indirect service dependencies
+    - I want to watch the indirect service dependencies
+#--- dependency END ---#
+
+
+- intent: choose_type_of_display
+  examples: |
+    - present in [text](displays)
+    - present in [image](displays)
+    - present in [url](displays)
+    - I want to see insight by [text](displays)
+    - I want to see insight by [image](displays)
+    - I want to see insight by [url](displays)
+
+
+#--- swagger START ---#
+- intent: choose_swagger
+  examples: |
+    - I want to find [swagger](function)
+    - Can you show me the [swagger](function) of service?
+    - Show me the [swagger](function)
+    - i want to find [swagger](function)
+    - i want to watch [swagger](function)
+- intent: choose_services_of_swagger
+  examples: |
+    - I want to find all swagger of [productpage.book.v1](services)
+    - I want to find all swagger of [details.book.v1](services)
+    - I want to find all swagger of [ratings.book.v1](services)
+    - I want to find all swagger of [reviews.book.v1](services)
+    - I want to find all swagger of [reviews.book.v2](services)
+    - I want to find all swagger of [reviews.book.v3](services)
+    - I want to find all swagger of [a.b.c](services)
+#--- swagger END ---#
+
+
+#--- schema START ---#
+- intent: choose_schema
+  examples: |
+    - i want to watch schema of endpoint
+- intent: choose_endpoint_of_schema
+  examples: |
+    - i want to watch schema of [(v1) GET /details/0](endpoint)
+#--- schema END ---#
+
+- lookup: function
+  examples: |
+    - insight
+    - dependency
+    - swagger
+    - schema
+- regex: services
+  examples: |
+    - [A-Za-z0-9].*
+- regex: endpoint
+  examples: |
+    - ([A-Za-z0-9].*) [A-Za-z0-9].* [A-Za-z0-9/].*
+- lookup: displays
+  examples: |
+    - text
+    - image
+    - url

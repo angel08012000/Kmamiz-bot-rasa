@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-dependencies",
+      "2": "I-dependencies",
+      "3": "L-dependencies",
+      "4": "U-dependencies",
+      "5": "B-displays",
+      "6": "I-displays",
+      "7": "L-displays",
+      "8": "U-displays",
+      "9": "B-insights",
+      "10": "I-insights",
+      "11": "L-insights",
+      "12": "U-insights",
+      "13": "B-services",
+      "14": "I-services",
+      "15": "L-services",
+      "16": "U-services",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-dependencies": 1,
+      "I-dependencies": 2,
+      "L-dependencies": 3,
+      "U-dependencies": 4,
+      "B-displays": 5,
+      "I-displays": 6,
+      "L-displays": 7,
+      "U-displays": 8,
+      "B-insights": 9,
+      "I-insights": 10,
+      "L-insights": 11,
+      "U-insights": 12,
+      "B-services": 13,
+      "I-services": 14,
+      "L-services": 15,
+      "U-services": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

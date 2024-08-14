@@ -1,0 +1,102 @@
+version: "3.1"
+
+rules:
+
+- rule: start
+  steps:
+  - intent: start_kmamiz_bot
+  - action: utter_start_kmamiz_bot
+
+#--- insight START ---#
+- rule: set insight to function path
+  steps:
+  - intent: choose_insights
+    entities:
+    - function: insight
+  - slot_was_set:
+    - function: insight
+  - action: action_respond_based_on_function_value
+- rule: set insight path
+  steps:
+  - intent: choose_type_of_insights
+  - action: action_fill_insight_slot
+  - action: action_respond_based_on_insight_value
+- rule: set service of insight path
+  steps:
+  - intent: choose_services_of_insights
+    entities:
+    - services: a\tb\tc
+  - slot_was_set:
+    - service: a\tb\tc
+  - action: utter_type_of_display
+#--- insight END ---#
+
+
+#--- dependency START ---#
+- rule: set dependency to function path
+  steps:
+  - intent: choose_dependencies
+    entities:
+    - function: dependency
+  - slot_was_set:
+    - function: dependency
+  - action: action_respond_based_on_function_value
+- rule: set dependency path
+  steps:
+  - intent: choose_type_of_dependencies
+  - action: action_fill_dependency_slot
+  - action: utter_type_of_display
+#--- dependency END ---#
+
+
+- rule: set and get display path
+  steps:
+  - intent: choose_type_of_display
+    entities:
+    - displays: text
+  - slot_was_set:
+    - display: text
+  - action: action_get_output
+  - action: utter_again_kmamiz_bot
+
+
+#--- swagger START ---#
+- rule: set swagger to function path
+  steps:
+  - intent: choose_swagger
+    entities:
+    - function: swagger
+  - slot_was_set:
+    - function: swagger
+  - action: action_get_service_of_swagger
+- rule: set service of swagger path
+  steps:
+  - intent: choose_services_of_swagger
+    entities:
+    - services: a\tb\tc
+  - slot_was_set:
+    - service: a\tb\tc
+  - action: action_display_swagger
+  - action: utter_again_kmamiz_bot
+#--- swagger END ---#
+
+
+#--- schema START ---#
+- rule: set schema to function path
+  steps:
+  - intent: choose_schema
+    entities:
+    - function: schema
+  - slot_was_set:
+    - function: schema
+  - action: action_respond_based_on_function_value
+- rule: set endpoint path
+  steps:
+  - intent: choose_endpoint_of_schema
+    entities:
+    - endpoint: (v1) GET /details/0
+  - slot_was_set:
+    - endpoint: (v1) GET /details/0
+  - action: action_display_schema
+  - action: utter_again_kmamiz_bot
+#--- schema END ---#

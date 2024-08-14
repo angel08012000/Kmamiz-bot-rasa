@@ -1,0 +1,131 @@
+version: '3.1'
+intents:
+- start_kmamiz_bot
+- choose_insights
+- choose_dependencies
+- choose_swagger
+- choose_schema
+- choose_services_of_insights
+- choose_services_of_swagger
+- choose_type_of_insights
+- choose_type_of_dependencies
+- choose_type_of_display
+- choose_endpoint_of_schema
+
+entities:
+- function
+- insights
+- dependency
+- services
+- endpoint
+- displays
+
+slots:
+  function:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: function
+  insight:
+    type: text
+    mappings:
+    - type: custom
+  dependency:
+    type: text
+    mappings:
+    - type: custom
+  service:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: services
+      intent: choose_services_of_swagger
+    - type: from_entity
+      entity: services
+      intent: choose_services_of_insights
+  display:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: displays
+  endpoint:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: endpoint
+      intent: choose_endpoint_of_schema
+
+responses:
+  utter_start_kmamiz_bot:
+  # - text: "The cohesion of details.book.v1 is\n\nSIDC: 1\n\nSIUC: 1\n\nTSIC: 1.0\n\nThe cohesion of productpage.book.v1 is\n\nSIDC: 1\n\nSIUC: 0\n\nTSIC: 0.5\n\nThe cohesion of ratings.book.v1 is\n\nSIDC: 1\n\nSIUC: 1\n\nTSIC: 1.0"
+  - text: Hi! I’m KMamiz-Bot! Please select one of the below feature types according to the information you need. You can also type your query directly.
+    buttons:
+    - title: Service Metrics
+      payload: /choose_insights{{"function":"insight"}}
+    - title: Dependency Insights
+      payload: /choose_dependencies{{"function":"dependency"}}
+    - title: Swagger UI
+      payload: /choose_swagger{{"function":"swagger"}}
+    - title: Schema of Endpoints
+      payload: /choose_schema{{"function":"schema"}}
+  utter_again_kmamiz_bot:
+  - text: May I ask what other features you would like to use?
+    buttons:
+    - title: watch the insights of services
+      payload: /choose_insights{{"function":"insight"}}
+    - title: watch the dependency
+      payload: /choose_dependencies{{"function":"dependency"}}
+    - title: watch Swagger UI
+      payload: /choose_swagger{{"function":"swagger"}}
+    - title: watch the schema of one endpoint
+      payload: /choose_schema{{"function":"schema"}}
+  utter_choose_insights:
+  - text: I want to ...
+    buttons:
+    - title: watch the cohesion of all service
+      payload: /choose_type_of_insights{{"insights":"cohesion"}}
+    - title: watch the coupling of all service
+      payload: /choose_type_of_insights{{"insights":"coupling"}}
+    - title: watch the instability of all service
+      payload: /choose_type_of_insights{{"insights":"instability"}}
+    - title: watch all insights of one service
+      payload: /choose_type_of_insights{{"insights":"all insights"}}
+  utter_choose_dependencies:
+  - text: I want to ...
+    buttons:
+    - title: watch the service dependency graph
+      payload: /choose_type_of_dependencies{{"dependency":"service dependency graph"}}
+    - title: watch the endpoint dependency graph
+      payload: /choose_type_of_dependencies{{"dependency":"endpoint dependency graph"}}
+    - title: watch the direct service dependencies
+      payload: /choose_type_of_dependencies{{"dependency":"direct service dependencies"}}
+    - title: watch all indirect service dependencies
+      payload: /choose_type_of_dependencies{{"dependency":"indirect service dependencies"}}
+  utter_type_of_display:
+  - text: Choose the way to display
+    buttons:
+    - title: text
+      payload: '/choose_type_of_display{{"displays": "text"}}'
+    - title: image
+      payload: '/choose_type_of_display{{"displays": "image"}}'
+    - title: link
+      payload: '/choose_type_of_display{{"displays": "url"}}'
+
+actions:
+- utter_start_kmamiz_bot
+- utter_again_kmamiz_bot
+- utter_choose_insights
+- utter_type_of_display
+- action_fill_insight_slot
+- action_fill_dependency_slot
+- action_choose_schema
+- action_display_schema
+- action_display_swagger
+- action_get_output
+- action_get_service_of_swagger
+- action_respond_based_on_function_value
+- action_respond_based_on_insight_value
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,22 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=utter_start_kmamiz_bot];
+3 [class=active, fontsize=12, label=utter_ask_namespace];
+5 [class=active, fontsize=12, label=action_respond_based_on_function_value];
+6 [class="dashed active", fontsize=12, label=action_default_fallback];
+7 [class="intent active", fillcolor=lightblue, label="/start_kmamiz_bot", shape=rect, style=filled];
+8 [class="intent active", fillcolor=lightblue, label="/choose_charts", shape=rect, style=filled];
+9 [class="intent active", fillcolor=lightblue, label="/say_namespace", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 7  [class=active, key=0];
+2 -> 8  [class=active, key=0];
+3 -> 3  [class=active, key=NONE, label=""];
+3 -> 9  [class=active, key=0];
+5 -> 6  [class=active, key=NONE, label=""];
+7 -> 2  [class=active, key=0];
+8 -> 3  [class=active, key=0];
+9 -> 5  [class=active, key=0];
+}

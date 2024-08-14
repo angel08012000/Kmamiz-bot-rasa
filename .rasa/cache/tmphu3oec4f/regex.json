@@ -1,0 +1,26 @@
+[
+  {
+    "name": "endpoint",
+    "pattern": "[A-Za-z0-9].*"
+  },
+  {
+    "name": "services",
+    "pattern": "[A-Za-z0-9].*"
+  },
+  {
+    "name": "displays",
+    "pattern": "(text|image|url)"
+  },
+  {
+    "name": "insights",
+    "pattern": "(cohesion|coupling|instability|all\\ insights)"
+  },
+  {
+    "name": "dependencies",
+    "pattern": "(service\\ dependency\\ graph|endpoint\\ dependency\\ graph|direct\\ service\\ dependencies|indirect\\ service\\ dependencies)"
+  },
+  {
+    "name": "function",
+    "pattern": "(insight|dependency|swagger|schema)"
+  }
+]
